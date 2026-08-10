@@ -120,6 +120,62 @@
   margin-top: 0;
 }
 
+.order-item-line {
+  margin: 0 0 1rem;
+  color: #4a2c00;
+  font-weight: 600;
+}
+
+.order-total-line {
+  margin: 0.75rem 0 1rem;
+  font-weight: 700;
+  color: #e65100;
+}
+
+.pickup-payment {
+  text-align: center;
+}
+
+.payment-summary {
+  font-size: 1.05rem;
+  margin: 0.75rem 0;
+  color: #4a2c00;
+}
+
+.payment-note {
+  color: #8a5a1c;
+  margin-bottom: 1.25rem;
+}
+
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.payment-cancel {
+  border: none;
+  background: none;
+  color: #8a5a1c;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.pickup-confirmation {
+  text-align: center;
+}
+
+.pickup-confirmation-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pickup-confirmation p {
+  margin: 0.5rem 0 1.25rem;
+  color: #4a2c00;
+}
+
 .pickup-modal label {
   display: block;
   margin-bottom: 1rem;
@@ -141,4 +197,56 @@
   margin: 0 0 0.75rem;
   color: #4a2c00;
   font-size: 0.95rem;
+}
+
+.hygiene-report-link {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  background: none;
+  border: none;
+  color: #bf360c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.closed-note {
+  margin: 0 0 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #fff3e0;
+  border: 1px solid #ff9800;
+  border-radius: 8px;
+  color: #bf360c;
+  font-weight: 600;
+}
+
+.special-name {
+  font-weight: 600;
+  display: block;
+}
+
+.special-ingredients {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #8a5a1c;
+}
+
+.special-price {
+  font-weight: 700;
+  color: #e65100;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #e65100;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }
