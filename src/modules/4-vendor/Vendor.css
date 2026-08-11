@@ -1,0 +1,252 @@
+.vendor-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  color: #4a2c00;
+  min-height: 100vh;
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.vendor-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #e65100;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.open {
+  background-color: #ff9800;
+  color: #ffffff;
+}
+
+.status-badge.closed {
+  background-color: #ffffff;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+}
+
+.parking-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: #fff3e0;
+  border: 1px solid #ffcc80;
+  margin-bottom: 1rem;
+}
+
+.parking-status .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.parking-status .dot.available {
+  background-color: #ff9800;
+}
+
+.parking-status .dot.full {
+  background-color: #bf360c;
+}
+
+.special-menu {
+  margin-bottom: 1rem;
+}
+
+.special-menu h2 {
+  color: #e65100;
+}
+
+.special-menu .special-item {
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8f0;
+}
+
+.pickup-modal-trigger {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff9800;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pickup-modal-trigger:hover {
+  background-color: #e65100;
+}
+
+.pickup-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 44, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pickup-modal {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid #ff9800;
+}
+
+.pickup-modal h2 {
+  color: #e65100;
+  margin-top: 0;
+}
+
+.order-item-line {
+  margin: 0 0 1rem;
+  color: #4a2c00;
+  font-weight: 600;
+}
+
+.order-total-line {
+  margin: 0.75rem 0 1rem;
+  font-weight: 700;
+  color: #e65100;
+}
+
+.pickup-payment {
+  text-align: center;
+}
+
+.payment-summary {
+  font-size: 1.05rem;
+  margin: 0.75rem 0;
+  color: #4a2c00;
+}
+
+.payment-note {
+  color: #8a5a1c;
+  margin-bottom: 1.25rem;
+}
+
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.payment-cancel {
+  border: none;
+  background: none;
+  color: #8a5a1c;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.pickup-confirmation {
+  text-align: center;
+}
+
+.pickup-confirmation-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pickup-confirmation p {
+  margin: 0.5rem 0 1.25rem;
+  color: #4a2c00;
+}
+
+.pickup-modal label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #4a2c00;
+  font-weight: 600;
+}
+
+.pickup-modal input {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ffcc80;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.crowd-note {
+  margin: 0 0 0.75rem;
+  color: #4a2c00;
+  font-size: 0.95rem;
+}
+
+.hygiene-report-link {
+  display: block;
+  margin: 1rem 0 1.5rem;
+  background: none;
+  border: none;
+  color: #bf360c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.closed-note {
+  margin: 0 0 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #fff3e0;
+  border: 1px solid #ff9800;
+  border-radius: 8px;
+  color: #bf360c;
+  font-weight: 600;
+}
+
+.special-name {
+  font-weight: 600;
+  display: block;
+}
+
+.special-ingredients {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #8a5a1c;
+}
+
+.special-price {
+  font-weight: 700;
+  color: #e65100;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #e65100;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,109 @@
+.orders-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  color: #4a2c00;
+}
+
+.orders-page h1 {
+  color: #e65100;
+  margin-bottom: 0.25rem;
+}
+
+.orders-subtitle {
+  color: #8a5a1c;
+  margin-bottom: 1.5rem;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #fff8f0;
+  border: 1px solid #ffcc80;
+  border-radius: 12px;
+}
+
+.orders-browse-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #e65100;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.orders-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.4rem;
+  background: #ffffff;
+  border: 1px solid #ffcc80;
+  border-radius: 12px;
+}
+
+.order-card-main h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  color: #1a1000;
+}
+
+.order-card-main p {
+  margin: 0 0 0.3rem;
+  color: #4a2c00;
+}
+
+.order-date {
+  font-size: 0.8rem;
+  color: #8a5a1c;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.order-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.order-rating-label {
+  font-size: 0.8rem;
+  color: #8a5a1c;
+}
+
+.order-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.order-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.order-total {
+  font-weight: 700;
+  color: #e65100;
+}

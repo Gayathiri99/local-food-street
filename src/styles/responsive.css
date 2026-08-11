@@ -1,0 +1,284 @@
+/* src/styles/responsive.css — owned by Member 7 (Sandeep) */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell main,
+.app-shell > div {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #ffcc80;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-inner {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-weight: 800;
+  color: #e65100;
+  text-decoration: none;
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  line-height: 1;
+}
+
+.navbar-links a,
+.navbar-links button {
+  display: inline-flex;
+  align-items: center;
+  height: 1.2rem;
+}
+
+.navbar-links a {
+  color: #4a2c00;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: #e65100;
+}
+
+.navbar-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-username {
+  color: #4a2c00;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.navbar-logout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0.3rem;
+  border-radius: 50%;
+  color: #e65100;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.navbar-logout-icon:hover {
+  background: #fff3e0;
+}
+
+.navbar-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #8a5a1c;
+  font-size: 0.85rem;
+  border-top: 1px solid #ffcc80;
+}
+
+/* Locked preview overlay used on Home/Listing before login */
+.locked-preview {
+  position: relative;
+}
+
+.locked-preview::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.85) 55%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+.locked-preview-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.locked-preview-cta p {
+  margin: 0;
+  color: #4a2c00;
+  font-weight: 600;
+}
+
+.locked-preview-cta .cta-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.locked-preview-cta a {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.locked-preview-cta .cta-primary {
+  background: #ff9800;
+  color: #ffffff;
+}
+
+.locked-preview-cta .cta-secondary {
+  border: 2px solid #ff9800;
+  color: #e65100;
+}
+
+/* Shared star rating widget (Orders page, Feedback modal) */
+.star-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star-rating-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff9800;
+  line-height: 1;
+  padding: 0;
+}
+
+.star-rating-btn:disabled {
+  cursor: default;
+}
+
+/* Feedback modal (auto-prompted after a customer's 2nd order) */
+.feedback-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(74, 44, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.feedback-modal {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  border: 2px solid #ff9800;
+  text-align: center;
+}
+
+.feedback-modal h2 {
+  color: #e65100;
+  margin-top: 0;
+}
+
+.feedback-subtitle {
+  color: #8a5a1c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-comment-label {
+  display: block;
+  text-align: left;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #4a2c00;
+}
+
+.feedback-comment-label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid #ffcc80;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.feedback-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.feedback-thanks h2 {
+  margin: 0.5rem 0 1.25rem;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #ffcc80;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .navbar-links.closed {
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+}

@@ -9,5 +9,11 @@ body {
 }
 
 #root {
+/* App-level layout only. Each module owns its own page styling
+   (Home.css, Listing.css, Map.css, Vendor.css, Reviews.css, User.css). */
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
