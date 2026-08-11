@@ -16,6 +16,7 @@ import InteractiveMap from './modules/3-map/components/InteractiveMap';
 import LoginPage from './modules/6-user/LoginPage';
 import RegisterPage from './modules/6-user/RegisterPage';
 import OrdersPage from './pages/OrdersPage';
+import AIChatbotDrawer from './modules/6-user/components/AIChatbotDrawer';
 
 import './App.css';
 import './styles/responsive.css';
@@ -54,6 +55,7 @@ export default function App() {
               </Routes>
 
               <Footer />
+              <AIChatbotDrawer />
             </BrowserRouter>
           </ResponsiveWrapper>
         </FeedbackProvider>
