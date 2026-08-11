@@ -18,6 +18,17 @@
   color: #e65100;
 }
 
+.auth-error {
+  background: #fdecea;
+  border: 1px solid #f5b7ac;
+  color: #b3261e;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .auth-form-wrapper .input-group {
   margin-bottom: 1rem;
 }

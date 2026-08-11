@@ -6,11 +6,14 @@ import './User.css';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { registerUser } = useAuth();
 
   function handleSuccess(formData) {
-    login({ email: formData.email, name: formData.fullName });
-    navigate('/');
+    const result = registerUser(formData);
+    if (result.success) {
+      navigate('/');
+    }
+    return result;
   }
 
   return (

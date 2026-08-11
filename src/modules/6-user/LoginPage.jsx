@@ -6,11 +6,14 @@ import './User.css';
 
 export default function LoginPage() {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { loginUser } = useAuth();
 
   function handleSuccess(formData) {
-    login({ email: formData.email });
-    navigate('/');
+    const result = loginUser(formData);
+    if (result.success) {
+      navigate('/');
+    }
+    return result;
   }
 
   return (

@@ -3,18 +3,24 @@ import React, { useState } from 'react';
 const LoginForm = ({ onSwitchToRegister, onSuccess }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (error) setError('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    
+    setError('');
+
     setTimeout(() => {
       setLoading(false);
-      onSuccess?.(formData);
+      const result = onSuccess?.(formData);
+      if (result && result.success === false) {
+        setError(result.error);
+      }
     }, 1200);
   };
 
@@ -24,6 +30,8 @@ const LoginForm = ({ onSwitchToRegister, onSuccess }) => {
         <h3>Welcome Back! 🍔</h3>
         <p>Login to order your favorite cravings</p>
       </div>
+
+      {error && <p className="auth-error">{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <div className="input-group">
@@ -66,3 +74,4 @@ const LoginForm = ({ onSwitchToRegister, onSuccess }) => {
 };
 
 export default LoginForm;
+

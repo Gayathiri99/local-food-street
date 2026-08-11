@@ -8,20 +8,26 @@ const RegisterForm = ({ onSwitchToLogin, onSuccess }) => {
   });
   const [selectedCuisine, setSelectedCuisine] = useState('🍕 Pizza');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const cuisines = ['🍕 Pizza', '🍔 Burger', '🍣 Sushi', '🥗 Healthy', '🌮 Tacos'];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (error) setError('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
 
     setTimeout(() => {
       setLoading(false);
-      onSuccess?.({ ...formData, favoriteCuisine: selectedCuisine });
+      const result = onSuccess?.({ ...formData, favoriteCuisine: selectedCuisine });
+      if (result && result.success === false) {
+        setError(result.error);
+      }
     }, 1200);
   };
 
@@ -31,6 +37,8 @@ const RegisterForm = ({ onSwitchToLogin, onSuccess }) => {
         <h3>Join Foodify 🍕</h3>
         <p>Create an account to unlock tasty deals</p>
       </div>
+
+      {error && <p className="auth-error">{error}</p>}
 
       <form onSubmit={handleSubmit}>
         <div className="input-group">
