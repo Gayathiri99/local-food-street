@@ -1,8 +1,3 @@
-import './App.css'
-import InteractiveMap from './modules/3-map/components/InteractiveMap'
-
-function App() {
-  return <InteractiveMap />
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 

@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #fff7ed;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-#root {
 /* App-level layout only. Each module owns its own page styling
    (Home.css, Listing.css, Map.css, Vendor.css, Reviews.css, User.css). */
 
