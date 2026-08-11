@@ -66,14 +66,34 @@
   color: #e65100;
 }
 
-.navbar-logout {
+.navbar-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-username {
+  color: #4a2c00;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.navbar-logout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: none;
-  padding: 0;
-  color: #4a2c00;
-  font-weight: 600;
+  padding: 0.3rem;
+  border-radius: 50%;
+  color: #e65100;
   cursor: pointer;
-  font-size: 0.95rem;
+  line-height: 0;
+}
+
+.navbar-logout-icon:hover {
+  background: #fff3e0;
 }
 
 .navbar-toggle {

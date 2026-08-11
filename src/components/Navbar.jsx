@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LogOut } from 'lucide-react';
 import { useResponsive } from '../modules/7-responsive/ResponsiveWrapper';
 import { useAuth } from '../modules/6-user/AuthContext';
 
 export default function Navbar() {
   const { isMobile, menuOpen, toggleMenu, closeMenu } = useResponsive();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, user, logout } = useAuth();
+
+  // LoginPage only collects an email, RegisterPage collects a name too — so
+  // fall back to the part of the email before the @ when there's no name.
+  const displayName = user?.name || user?.email?.split('@')[0] || 'Account';
 
   return (
     <nav className="navbar">
@@ -41,15 +46,20 @@ export default function Navbar() {
             </Link>
           )}
           {isAuthenticated ? (
-            <button
-              className="navbar-logout"
-              onClick={() => {
-                logout();
-                closeMenu();
-              }}
-            >
-              Log out
-            </button>
+            <div className="navbar-account">
+              <span className="navbar-username">{displayName}</span>
+              <button
+                className="navbar-logout-icon"
+                onClick={() => {
+                  logout();
+                  closeMenu();
+                }}
+                aria-label="Log out"
+                title="Log out"
+              >
+                <LogOut size={18} />
+              </button>
+            </div>
           ) : (
             <Link to="/login" onClick={closeMenu}>
               Login
