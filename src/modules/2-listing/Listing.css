@@ -1,5 +1,5 @@
 /* src/modules/2-listing/Listing.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --primary-color: #ff4757;
@@ -25,16 +25,22 @@ html {
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   padding: 2rem 1rem;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
   color: var(--text-dark);
   position: relative;
   overflow-x: hidden;
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero-header {
@@ -75,13 +81,25 @@ html {
   position: absolute;
   font-size: 3.5rem;
   z-index: -1;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
   user-select: none;
 }
-.food-1 { top: 10%; left: 15%; }
-.food-2 { top: 20%; right: 18%; }
-.food-3 { top: 60%; left: 22%; }
-.food-4 { top: 50%; right: 12%; }
+.food-1 {
+  top: 10%;
+  left: 15%;
+}
+.food-2 {
+  top: 20%;
+  right: 18%;
+}
+.food-3 {
+  top: 60%;
+  left: 22%;
+}
+.food-4 {
+  top: 50%;
+  right: 12%;
+}
 
 .filters-container {
   display: flex;
@@ -114,7 +132,7 @@ html {
   width: 100%;
   padding: 1.2rem 1.2rem 1.2rem 4rem;
   font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border: 2px solid var(--glass-border);
   border-radius: 50px;
   background: var(--glass-bg);
@@ -154,7 +172,7 @@ html {
   border-radius: 50px;
   background: var(--glass-bg);
   color: var(--text-dark);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -165,7 +183,7 @@ html {
 
 .filter-chip:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -193,20 +211,27 @@ html {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .vendor-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transform: skewX(-25deg);
   transition: 0.75s;
   z-index: 5;
@@ -241,9 +266,15 @@ html {
 }
 
 @keyframes pulseHeart {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .favorite-btn {
@@ -263,7 +294,7 @@ html {
   backdrop-filter: blur(8px);
   transition: var(--transition);
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .favorite-btn:hover {
@@ -310,7 +341,7 @@ html {
   font-weight: 600;
   backdrop-filter: blur(8px);
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -391,7 +422,7 @@ html {
   background: var(--primary-gradient);
   color: white;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   cursor: pointer;
   transition: var(--transition);
@@ -400,16 +431,18 @@ html {
 }
 
 .view-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.4s ease, height 0.4s ease;
+  transition:
+    width 0.4s ease,
+    height 0.4s ease;
 }
 
 .view-btn:hover::after {
@@ -536,26 +569,76 @@ html {
 }
 
 @media (max-width: 768px) {
-  .hero-header { 
-    padding-top: 2rem; 
-    margin-bottom: 3.5rem; 
+  .hero-header {
+    padding-top: 2rem;
+    margin-bottom: 3.5rem;
     gap: 1rem;
   }
-  .hero-header h1 { 
-    font-size: 2.6rem; 
-    line-height: 1.3; 
+  .hero-header h1 {
+    font-size: 2.6rem;
+    line-height: 1.3;
   }
-  .hero-header p { 
-    font-size: 1.1rem; 
+  .hero-header p {
+    font-size: 1.1rem;
     line-height: 1.5;
     padding: 0 1rem;
   }
-  .vendor-grid { grid-template-columns: 1fr; }
-  .floating-food { display: none; }
+  .vendor-grid {
+    grid-template-columns: 1fr;
+  }
+  .floating-food {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-header h1 {
     font-size: 2.2rem;
   }
+}
+
+/* Veg / Non-Veg indicator beside wishlist */
+.card-food-type {
+  position: absolute;
+  top: 22px;
+  right: 85px;
+
+  width: 32px;
+  height: 32px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  z-index: 5;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card-food-type .food-type-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Vegetarian */
+.card-food-type.veg {
+  border-color: #16883e;
+}
+
+.card-food-type.veg .food-type-dot {
+  background-color: #16883e;
+}
+
+/* Non-Vegetarian */
+.card-food-type.nonveg {
+  border-color: #c62828;
+}
+
+.card-food-type.nonveg .food-type-dot {
+  background-color: #c62828;
 }
