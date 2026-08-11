@@ -81,7 +81,7 @@ const baseShops = [
     crowded: 'Moderate',
     pickup: true,
     // Close to TASMAC 1 (~200m away) -> Family Zone NOT Enabled
-    latOffset: 0.0025,
+    latOffset: 0.0070,
     lngOffset: 0.0018,
   },
   {
@@ -164,6 +164,53 @@ const baseShops = [
     latOffset: 0.0015,
     lngOffset: 0.0045,
   },
+  {
+  id: 'green-leaf',
+  name: 'Green Leaf Salads',
+  category: 'Healthy Food',
+  streetType: 'small_street',
+  x: 38,
+  y: 45,
+  note: 'Fresh salads and smoothie bowls',
+  open: true,
+  timing: '9:00 AM - 8:00 PM',
+  crowded: 'Low',
+  pickup: true,
+  latOffset: 0.0050,
+  lngOffset: 0.0040,
+},
+
+{
+  id: 'sweet-treats',
+    name: 'Sweet Treats Corner',
+    category: 'Desserts',
+  streetType: 'main_street',
+  x: 61,
+  y: 35,
+  note: 'Traditional sweets and ice cream',
+  open: true,
+  timing: '12:00 PM - 10:00 PM',
+  crowded: 'Moderate',
+  pickup: true,
+  latOffset: 0.0051,
+  lngOffset: 0.0062,
+},
+
+{
+  id: 'cool-sips',
+    name: 'Cool Sips Juice Bar',
+    category: 'Drinks',
+  streetType: 'small_street',
+  x: 82,
+  y: 71,
+  note: 'Fresh juices, lassi and shakes',
+  open: false,
+  timing: '8:00 AM - 11:00 PM',
+  crowded: 'Busy',
+  pickup: true,
+  latOffset: 0.0074,
+  lngOffset: 0.0036,
+}
 ]
 // Function to check if current time falls within opening hours
 function isShopOpenNow(timingString) {
