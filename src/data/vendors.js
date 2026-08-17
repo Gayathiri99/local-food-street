@@ -179,7 +179,7 @@ export const VENDORS = [
     name: "Cool Sips Juice Bar",
     category: "Drinks",
     foodType: "veg",
-    timing: "8:00 AM - 11:00 PM",
+    timing: "12:00 AM - 11:59 PM",
     crowded: "Busy",
     pickup: true,
     note: "Fresh juices, lassi and shakes",
